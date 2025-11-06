@@ -4,28 +4,42 @@ int main()
 {
     // Declara e inicializa a variavel
     int numero = 0;
-
-    // Solicita ao usuario que digite um numero inteiro
-    printf("digite um numero inteiro: ");
-
+    int opcao = 0;
 
     // estrutura de repeticao para verificar se o numero e par ou impar
     do
     {
+        // Solicita ao usuario que digite um numero inteiro
+        printf("------Menu-------\n");
+        printf("1.Verificar Numero: \n");
+        printf("2.Finalizar\n");
+        printf("opcao escolhida: \n");
+        scanf("%d", &opcao);
 
-        scanf("%d", &numero);
+        switch (opcao)
+        {
+        case 1:
+            printf("Digite um numero inteiro ");
+            scanf("%d", &numero);
+            if (numero % 2 == 0)
+            {
+                printf("numero e par\n");
+            }
+            else
+            {
+                printf("numero e impar\n");
+            }
+            break;
+        case 2:
+            printf("finalizando...\n");
+            break;
+        default:
+            printf("opacao invalida... \n");
+        }
 
-        if (numero % 2 == 0)
-        {
-            printf("numero e par\n");
-        }
-        else
-        {
-            printf("numero e impar\n");
-        }
-    } while (numero != 0);
+    } while (opcao != 2);
 
     printf("Verificacao encerrada. \n");
-    
-        return 0;
+
+    return 0;
 }
