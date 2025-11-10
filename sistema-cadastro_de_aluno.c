@@ -6,9 +6,10 @@ int main()
 {
 
     int opcao = 0;
-    char nome[50];
-    int idade = 0;
-    float nota = 0.00;
+    char nome[43][50];
+    int idade[43];
+    float nota[43];
+    int total = 0;
 
     do
     {
@@ -24,18 +25,37 @@ int main()
         switch (opcao)
         {
         case 1:
-            printf("nome do aluno: \n");
-            scanf("%s", nome);
-            printf("idade: \n");
-            scanf("%d", &idade);
-            printf("nota: \n");
-            scanf("%.2f", &nota);
-            printf("Aluno %s cadastrado com sucesso!\n", nome);
-            printf("Deseja cadastrar outro aluno? se sim selecione a 'opcao 1' novamente ou selecione outra opcao\n");
+            if (total < 43)
+            {
+                printf("nome do aluno: \n");
+                scanf("%s", nome);
+                printf("idade: \n");
+                scanf("%d", &idade);
+                printf("nota: \n");
+                scanf("%.2f", &nota);
+                printf("Aluno %s cadastrado com sucesso!\n", nome, total++);
+                printf("Deseja cadastrar outro aluno? se nao, selecione outra opcao\n");
+            }
+            else
+            {
+                printf("Limite maximo de alunos por turma atingido!\n");
+            }
             break; /* */
+        case 2:
+            if (total == 0)
+            {
+                printf("Nenhum aluno cadastrado ainda.\n");
+            }
+            else
+            {
+                for (int i = 0; i < total; i++)
+                {
+                    printf("Aluno %d: Nome: %s, Idade: %d, Nota: %.2f\n", i + 1, nome[i], idade[i], nota[i]);
+                }
+            }
+            break;
 
-        default:
-            printf("opacao invalida... \n");
+            printf("opcao invalida... \n");
         }
     } while (opcao != 4);
 
