@@ -1,6 +1,7 @@
 // Sistema de cadastro de alunos
 
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -10,6 +11,8 @@ int main()
     int idade[43];
     float nota[43];
     int total = 0;
+    char buscaNome[50];
+    int encontrado = 0;
 
     do
     {
@@ -55,7 +58,25 @@ int main()
             }
             break;
 
-            
+        case 3:
+        {
+
+            printf("Digite o nome do aluno para buscar: \n");
+            scanf("%s", &buscaNome);
+            for (int i = 0; i < total; i++)
+            {
+                if (strcmp(nome[i], buscaNome) == 0)
+                {
+                    printf("Aluno encontrado: Nome: %s, Idade: %d, Nota: %.2f\n", nome[i], idade[i], nota[i]);
+                    encontrado = 1;
+                    break;
+                }
+            }
+            if (!encontrado)
+            {
+                printf("Aluno nao encontrado.\n");
+                        }
+        }
         default:
             printf("opcao invalida... \n");
         }
