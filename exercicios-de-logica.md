@@ -9,4 +9,4 @@ Função: contaLetra(palavra, letra)
 	•	Encontrar o maior número em um array
 Função: maiorNumero(numeros)
 	•	Calcular a média de números de um array
-Função: mediaNumeros(numeros)
+Função: mediaNumeros(numeros) [calculaMedia.c](calculaMedia.c)

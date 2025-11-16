@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-float mediaNumeros(int vetor[], int tamanho)
+float mediaNumeros(int num[], int tamanho)
 {
     int soma = 0;
 
     for (int i = 0; i < tamanho; i++)
     {
-        soma += vetor[i];
+        soma += num[i];
     }
 
     return (float)soma / tamanho;
