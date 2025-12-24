@@ -7,6 +7,6 @@ Função: somaPositivos(numeros) [somaPositivos.c](somaPositivos.c)
 	•	Contar quantas vezes uma letra aparece em uma palavra
 Função: contaLetra(palavra, letra) [contaLetra.c](contaLetra.c)
 	•	Encontrar o maior número em um array
-Função: maiorNumero(numeros)
+Função: maiorNumero(numeros) [maiorNumero.c](maiorNumero.c)  
 	•	Calcular a média de números de um array
 Função: mediaNumeros(numeros) [calculaMedia.c](calculaMedia.c)
